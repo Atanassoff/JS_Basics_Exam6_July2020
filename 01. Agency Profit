@@ -1,0 +1,11 @@
+function demo(input){
+    let company = input[0];
+    let numAdults = Number(input[1]);
+    let numKids = Number(input[2]);
+    let priceAdult = Number(input[3]);
+    let tax = Number(input[4]);
+    let priceKid = priceAdult * 0.3;
+    let total = numAdults * priceAdult + numKids * priceKid + (numAdults + numKids) * tax;
+    let profit = total * 0.2;
+    console.log(`The profit of your agency from ${company} tickets is ${profit.toFixed(2)} lv.`); 
+}
