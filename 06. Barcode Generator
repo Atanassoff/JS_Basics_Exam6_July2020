@@ -1,0 +1,25 @@
+function demo(input){
+   let x = Number(input[0]);
+   let y = Number(input[1]);
+   let str = "";
+   let x4 = x % 10;
+   let x3 = Math.floor(x / 10) % 10;
+   let x2 = Math.floor(x / 100) % 10;
+   let x1 = Math.floor(x / 1000) % 10;
+   let y4 = y % 10;
+   let y3 = Math.floor(y / 10) % 10;
+   let y2 = Math.floor(y / 100) % 10;
+   let y1 = Math.floor(y / 1000) % 10;
+   for(i = x1; i <= y1; i++){
+        for(j = x2; j <= y2; j++){
+            for(k = x3; k <= y3; k++){
+                for(l = x4; l <= y4; l++){
+                    if(i % 2 == 1 && j % 2 == 1 && k % 2 == 1 && l % 2 == 1){
+                        str += (i + "" + j + "" + k + "" + l + " "); 
+                    }
+                }
+            }
+        }
+   }
+   console.log(str);
+}
