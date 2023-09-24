@@ -1,0 +1,40 @@
+function demo(input){
+   let num = Number(input[0]);
+   let size = input[1];
+   let delivery = input[2];
+   let price = 0;
+   if(num < 10){
+      console.log("Invalid order");
+   }
+   else{
+      switch(size){
+      case"90X130":
+      if(num > 60){price = 110 * 0.92 * num;}
+      else if(num > 30){price = 110 * 0.95 * num;}
+      else{price = 110 * num;}
+      break;
+      case"100X150":
+      if(num > 80){price = 140 * 0.9 * num;}
+      else if(num > 40){price = 140 * 0.94 * num;}
+      else{price = 140 * num;}
+      break;
+      case"130X180":
+      if(num > 50){price = 190 * 0.88 * num;}
+      else if(num > 20){price = 190 * 0.93 * num;}
+      else{price = 190 * num;}
+      break;
+      case"200X300":
+      if(num > 50){price = 250 * 0.86 * num;}
+      else if(num > 25){price = 250 * 0.91 * num;}
+      else{price = 250 * num;}
+      break;
+      default:
+      break;
+      }
+      if(delivery == "With delivery"){
+         price += 60;
+      }
+      if(num > 99){price *= 0.96}
+   console.log(price.toFixed(2) + " BGN");
+   }   
+}
