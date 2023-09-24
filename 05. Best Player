@@ -1,0 +1,28 @@
+function demo(input){
+    let i = 0;
+    let name = "";
+    let goals = 0;
+    let best = "";
+    let max = 0;  
+    while(name !== "END"){
+        if(max >= 10){
+            break;
+        }
+        name = input[i]; 
+        goals = Number(input[i + 1]);
+        if(goals > max){
+            best = name; 
+            max = goals;
+        }
+        goals = 0;
+        i += 2;
+    }
+    if(max >= 3){
+        console.log(`${best} is the best player!`);
+        console.log(`He has scored ${max} goals and made a hat-trick !!!`);    
+    }
+    else{
+        console.log(`${best} is the best player!`);
+        console.log(`He has scored ${max} goals.`);    
+    }
+}
